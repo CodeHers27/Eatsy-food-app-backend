@@ -18,7 +18,7 @@ import User from "../models/user";
     tokenSigningAlg: 'RS256'
   });
 
-  export const jwtparse=async(req:Request,res:Response,next:NextFunction)=>{
+  export const jwtParse=async(req:Request,res:Response,next:NextFunction)=>{
     const {authorization}=req.headers;
 
     if(!authorization||!authorization.startsWith("Bearer ")){
